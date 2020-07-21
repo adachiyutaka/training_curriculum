@@ -1,4 +1,4 @@
-class CalendarsController < ApplicationController
+{class CalendarsController < ApplicationController
 
   # １週間のカレンダーと予定が表示されるページ
   def index
@@ -34,7 +34,7 @@ class CalendarsController < ApplicationController
       plan = @plans.map do |plan|
         plans.push(plan.plan) if plan.date == @todays_date + x
       end
-      days = { :month => (@todays_date + x).month, :date => (@todays_date+x).day, :plans => plans}
+      days = { month: (@todays_date + x).month, date: (@todays_date + x).day, plans: plans}
       @week_days.push(days)
     end
 
